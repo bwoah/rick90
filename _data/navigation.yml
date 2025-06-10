@@ -1,0 +1,52 @@
+- name: Brian Fulmer
+  file: brian_fulmer.adoc
+- name: Jane Fulmer
+  file: jane_fulmer.adoc
+- name: Anita Samardich
+  file: anita_samardich.adoc
+- name: Jack Meyer
+  file: jack_meyer.adoc
+- name: Dick Melstrom
+  file: dick_melstrom.adoc
+- name: Kathy McCurdy
+  file: kathy_mccurdy.adoc
+- name: Bob Van Dellen
+  file: bob_van_dellen.adoc
+- name: Tom Wendstadt
+  file: tom_wendstadt.adoc
+- name: Aris Georges
+  file: aris_georges.adoc
+- name: Joe Calverly
+  file: joe_calverly.adoc
+- name: Karen Jordan
+  file: karen_jordan.adoc
+- name: John Winn
+  file: john_winn.adoc
+- name: Mike Lueder
+  file: mike_lueder.adoc
+- name: Richard Tuxury
+  file: richard_tuxury.adoc
+- name: Penny & Thom Robinson
+  file: penny_thom_robinson.adoc
+- name: Brad Bauer
+  file: brad_bauer.adoc
+- name: Anne Bauer
+  file: anne_bauer.adoc
+- name: Raymond Fulmer
+  file: raymond_fulmer.adoc
+- name: Sophie Baruth
+  file: sophie_baruth.adoc
+- name: Esme and Leonie Bauer
+  file: esme_leonie_bauer.adoc
+- name: Shaun, Christa, and Loic Fulmer
+  file: shaun_christa_loic_fulmer.adoc
+- name: Mickey Putman
+  file: mickey_putman.adoc
+- name: Ty Fulmer
+  file: ty_fulmer.adoc
+- name: Bobbi and Ronnie Blackman
+  file: bobbi_ronnie_blackman.adoc
+- name: Justin Pepper
+  file: justin_pepper.adoc
+- name: Christine Samardich
+  file: christine_samardich.adoc

@@ -1,14 +1,21 @@
 {% extends "base.html" %}
 
 {% block content %}
+{% set names = config.extra.names | default(value=[]) %}
 <div class="container">
     <nav class="side-nav">
         <h2>Messages</h2>
+        <!-- Debug info -->
+        <div style="background: #eee; padding: 10px; margin: 10px 0;">
+            Config available: {{ config is defined }}<br>
+            Extra available: {{ config.extra is defined }}<br>
+            Names count: {{ names | length }}
+        </div>
         <ul class="name-list">
-            {% for slug in config.extra.names %}
+            {% for slug in names %}
                 <li class="name-item">
                     <a href="/{{ slug }}">
-                        {{ config.extra.display_names[slug] }}
+                        {{ config.extra.display_names[slug] | default(value=slug) }}
                     </a>
                 </li>
             {% endfor %}
@@ -20,4 +27,4 @@
         {{ section.content | safe }}
     </main>
 </div>
-{% endblock %}
+{% endblock content %}

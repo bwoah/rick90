@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Page</title>
+</head>
+<body>
+    <h1>Config Test</h1>
+    <pre>
+    Config title: {{ config.title }}
+    Names available: {{ config.extra.names | length }}
+    First name: {{ config.extra.names[0] }}
+    </pre>
+</body>
+</html>

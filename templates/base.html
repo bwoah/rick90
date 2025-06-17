@@ -2,9 +2,45 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>My Zola Site</title>
+    <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .side-nav {
+            width: 33%;
+            padding-right: 20px;
+        }
+        .main-content {
+            width: 67%;
+        }
+        .page-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .nav-button {
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #333;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .side-nav, .main-content {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
-    {% block content %} {% endblock %}
+    {% block content %}{% endblock content %}
 </body>
 </html>

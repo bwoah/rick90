@@ -4,7 +4,13 @@
 {% block content %}
 <div class="container">
     <nav class="side-nav">
-        <!-- Your existing navigation -->
+        <ul>
+            {% for name in config.extra.names %}
+                <li>
+                    <a href="/{{ name }}">{{ config.extra.display_names[name] }}</a>
+                </li>
+            {% endfor %}
+        </ul>
     </nav>
     
     <main class="main-content">

@@ -20,16 +20,23 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Install Zola
+        run: |
+          wget -q -O - \
+            "https://github.com/getzola/zola/releases/download/v0.17.2/zola-v0.17.2-x86_64-unknown-linux-gnu.tar.gz" \
+            | tar xzf - -C /usr/local/bin
+
+      - name: Build Site
+        run: zola build
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
-      - name: Build with Zola
-        uses: shalzz/zola-deploy-action@v0.17.2
-        env:
-          BUILD_DIR: .
-          TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BUILD_ONLY: true
+
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3  # Using v3
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'public'
 
   deploy:
     environment:

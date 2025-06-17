@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <nav class="side-nav">
+        <h2>Messages</h2>
+        <ul class="name-list">
+            {% for slug in config.extra.names %}
+                <li class="name-item">
+                    <a href="/{{ slug }}">
+                        {{ config.extra.display_names[slug] }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </nav>
+    
+    <main class="main-content">
+        <h1>{{ section.title }}</h1>
+        {{ section.content | safe }}
+    </main>
+</div>
+{% endblock %}

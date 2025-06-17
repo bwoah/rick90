@@ -1,0 +1,10 @@
+{% if caption %}
+    <figure>
+        <img src="https://imagedelivery.net/Km_N_YfQYLS9x31hnyx4Ig/{{ src }}/public" alt="{{ caption }}" />
+        <figcaption>{{ caption }}</figcaption>
+    </figure>
+{% else %}
+    <figure>
+        <img src="https://imagedelivery.net/Km_N_YfQYLS9x31hnyx4Ig/{{ src }}/public" alt="" />
+    </figure>
+{% endif %}

@@ -1,0 +1,375 @@
+// Base styles
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+// Layout
+.container {
+    display: flex;
+    min-height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+// Responsive design
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
+.container {
+    display: flex;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+.side-nav {
+    flex: 1;
+    max-width: 300px;
+    padding: 2rem 1rem;
+    background: #f5f5f5;
+    
+    h2 {
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid #333;
+    }
+}
+
+.name-list {
+    list-style: none;
+    padding: 0;
+    
+    .name-item {
+        margin-bottom: 0.5rem;
+        
+        a {
+            display: block;
+            padding: 0.5rem;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.2s ease;
+            
+            &:hover {
+                background: #e0e0e0;
+            }
+            
+            &.active {
+                background: #333;
+                color: white;
+            }
+        }
+    }
+}
+
+.main-content {
+    flex: 2;
+    padding: 2rem;
+}
+
+// Mobile responsiveness
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .side-nav {
+        max-width: 100%;
+        padding: 1rem;
+    }
+    
+    .name-list {
+        columns: 2;
+    }
+}
+
+@media (max-width: 480px) {
+    .name-list {
+        columns: 1;
+    }
+}
+
+.page-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+    
+    .nav-button {
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        color: #333;
+        background: #f5f5f5;
+        border-radius: 4px;
+        transition: all 0.2s ease;
+        
+        &:hover {
+            background: #e0e0e0;
+        }
+        
+        &.home {
+            background: #333;
+            color: white;
+            
+            &:hover {
+                background: #444;
+            }
+        }
+    }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+    .page-navigation {
+        flex-wrap: wrap;
+        gap: 1rem;
+        
+        .nav-button {
+            flex: 1;
+            text-align: center;
+            
+            &.home {
+                flex-basis: 100%;
+                order: -1;
+            }
+        }
+    }
+}
+
+// Video styling
+.video-container {
+    margin: 2rem 0;
+    
+    iframe {
+        border: none;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+}
+
+// Image styling
+figure {
+    margin: 2rem 0;
+    max-width: 100%;
+    
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 4px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    
+    figcaption {
+        text-align: center;
+        margin-top: 0.5rem;
+        font-style: italic;
+        color: #666;
+        font-size: 0.9rem;
+    }
+}
+
+// Content spacing and typography
+.main-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    
+    h1 {
+        margin-bottom: 1.5rem;
+        color: #333;
+    }
+    
+    h3 {
+        margin: 2rem 0 1rem;
+        color: #444;
+    }
+    
+    p {
+        margin-bottom: 1rem;
+        line-height: 1.6;
+    }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+    .main-content {
+        padding: 1rem;
+    }
+    
+    figure {
+        margin: 1.5rem 0;
+    }
+}
+
+// Optional: Add smooth transitions when images load
+img {
+    transition: opacity 0.3s ease;
+    
+    &[loading] {
+        opacity: 0;
+    }
+    
+    &.loaded {
+        opacity: 1;
+    }
+}
+
+// Image grid and lightbox
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+figure {
+    margin: 0;
+    padding: 1rem;
+    background: #f8f8f8;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+    
+    &:hover {
+        transform: translateY(-5px);
+    }
+    
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 4px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    
+    figcaption {
+        text-align: center;
+        margin-top: 1rem;
+        padding: 0.5rem;
+        background: #fff;
+        border-radius: 4px;
+        font-style: italic;
+        color: #666;
+        font-size: 0.9rem;
+    }
+}
+
+// Lightbox
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    z-index: 1000;
+    
+    &.active {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .lightbox-content {
+        max-width: 90%;
+        max-height: 90vh;
+        position: relative;
+        
+        img {
+            max-width: 100%;
+            max-height: 90vh;
+            object-fit: contain;
+        }
+        
+        .caption {
+            position: absolute;
+            bottom: -2rem;
+            left: 0;
+            right: 0;
+            text-align: center;
+            color: white;
+            padding: 1rem;
+        }
+        
+        .close-button {
+            position: absolute;
+            top: -2rem;
+            right: -2rem;
+            color: white;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+// Homepage specific styling
+.hero-image {
+    max-width: 100%;
+    margin: 2rem 0;
+    img {
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+}
+
+.container {
+    display: flex;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    
+    .side-nav {
+        flex: 0 0 300px;
+        padding: 1rem;
+        background: #f8f8f8;
+        border-radius: 8px;
+        
+        h2 {
+            margin-bottom: 1rem;
+            color: #333;
+        }
+    }
+    
+    .main-content {
+        flex: 1;
+        
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+        
+        p {
+            color: #34495e;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 1rem;
+        
+        .side-nav {
+            flex: none;
+            width: 100%;
+        }
+    }
+}

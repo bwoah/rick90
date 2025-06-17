@@ -1,0 +1,30 @@
+{% macro nav_buttons(current_path) %}
+    {% set current_index = -1 %}
+    {% for slug in config.extra.names %}
+        {% if current_path == slug %}
+            {% set_global current_index = loop.index0 %}
+        {% endif %}
+    {% endfor %}
+
+    <div class="page-navigation">
+        {% if current_index > 0 %}
+            {% set prev_index = current_index - 1 %}
+            {% set prev_slug = config.extra.names | nth(n=prev_index) %}
+            <a href="/{{ prev_slug }}" class="nav-button prev">
+                ← {{ config.extra.display_names[prev_slug] }}
+            </a>
+        {% endif %}
+
+        <a href="/" class="nav-button home">
+            Home
+        </a>
+
+        {% if current_index < config.extra.names | length - 1 %}
+            {% set next_index = current_index + 1 %}
+            {% set next_slug = config.extra.names | nth(n=next_index) %}
+            <a href="/{{ next_slug }}" class="nav-button next">
+                {{ config.extra.display_names[next_slug] }} →
+            </a>
+        {% endif %}
+    </div>
+{% endmacro nav_buttons %}

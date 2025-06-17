@@ -1,50 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ config.title }}</title>
-    <link rel="stylesheet" href="{{ get_url(path="style.css") | safe }}">
+    <meta charset="utf-8">
+    <title>My Zola Site</title>
 </head>
 <body>
-    <main>
-        {% block content %}{% endblock %}
-    </main>
+    {% block content %} {% endblock %}
 </body>
 </html>
-
-<div class="lightbox">
-    <div class="lightbox-content">
-        <img src="" alt="">
-        <div class="caption"></div>
-        <div class="close-button">×</div>
-    </div>
-</div>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const lightbox = document.querySelector('.lightbox');
-    const lightboxImg = lightbox.querySelector('img');
-    const lightboxCaption = lightbox.querySelector('.caption');
-    const closeButton = lightbox.querySelector('.close-button');
-
-    document.querySelectorAll('figure').forEach(figure => {
-        figure.addEventListener('click', function() {
-            const img = this.querySelector('img');
-            const caption = this.querySelector('figcaption');
-            
-            lightboxImg.src = img.src;
-            lightboxCaption.textContent = caption ? caption.textContent : '';
-            lightbox.classList.add('active');
-        });
-    });
-
-    [lightbox, closeButton].forEach(el => {
-        el.addEventListener('click', function(e) {
-            if (e.target === lightbox || e.target === closeButton) {
-                lightbox.classList.remove('active');
-            }
-        });
-    });
-});
-</script>

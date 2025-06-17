@@ -27,8 +27,19 @@ jobs:
             "https://github.com/getzola/zola/releases/download/v0.17.2/zola-v0.17.2-x86_64-unknown-linux-gnu.tar.gz" \
             | tar xzf - -C /usr/local/bin
 
+      - name: Debug Info
+        run: |
+          echo "Current directory:"
+          pwd
+          echo "\nDirectory contents:"
+          ls -la
+          echo "\nConfig.toml contents:"
+          cat config.toml
+          echo "\nTemplate contents:"
+          cat templates/index.html
+
       - name: Build Site
-        run: zola build
+        run: zola build --verbose
 
       - name: Setup Pages
         uses: actions/configure-pages@v4

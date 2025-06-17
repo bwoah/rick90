@@ -5,11 +5,19 @@
 <div class="container">
     <nav class="side-nav">
         <ul>
-            {% for name in config.extra.names %}
-                <li>
-                    <a href="/{{ name }}">{{ config.extra.display_names[name] }}</a>
-                </li>
-            {% endfor %}
+            {% if config.extra and config.extra.names %}
+                {% for name in config.extra.names %}
+                    <li>
+                        <a href="/{{ name }}">
+                            {% if config.extra.display_names[name] %}
+                                {{ config.extra.display_names[name] }}
+                            {% else %}
+                                {{ name }}
+                            {% endif %}
+                        </a>
+                    </li>
+                {% endfor %}
+            {% endif %}
         </ul>
     </nav>
     
@@ -17,7 +25,9 @@
         <h1>{{ page.title }}</h1>
         {{ page.content | safe }}
         
-        {{ macros::nav_buttons(current_path=page.slug) }}
+        {% if page.slug %}
+            {{ macros::nav_buttons(current_path=page.slug) }}
+        {% endif %}
     </main>
 </div>
 {% endblock %}

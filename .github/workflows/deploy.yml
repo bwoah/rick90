@@ -29,7 +29,7 @@ jobs:
           TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BUILD_ONLY: true
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1  # Using v1 which is still supported
+        uses: actions/upload-pages-artifact@latest  # Using latest instead of a specific version
 
   deploy:
     environment:

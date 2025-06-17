@@ -1,14 +1,11 @@
-test_value = "Config is loading correctly"
-
-[extra]
-test_message = "Extra section is loading correctly"
-
 base_url = "https://rick90.fulmerites.org"
 title = "Happy 80th, Ricky-Boy!"
 compile_sass = true
 build_search_index = false
+test_value = "Config is loading correctly"
 
 [extra]
+test_message = "Extra section is loading correctly"
 # Names are stored in display order
 names = [
     "01-brian-fulmer",

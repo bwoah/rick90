@@ -5,12 +5,6 @@
 <div class="container">
     <nav class="side-nav">
         <h2>Messages</h2>
-        <!-- Debug info -->
-        <div style="background: #eee; padding: 10px; margin: 10px 0;">
-            Config available: {{ config is defined }}<br>
-            Extra available: {{ config.extra is defined }}<br>
-            Names count: {{ names | length }}
-        </div>
         <ul class="name-list">
             {% for slug in names %}
                 <li class="name-item">

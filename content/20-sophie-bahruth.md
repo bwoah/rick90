@@ -1,5 +1,5 @@
 +++
-title = "Sophie Baruth"
+title = "Sophie Bahruth"
 template = "page.html"
 +++
 

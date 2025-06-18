@@ -3,22 +3,22 @@
 {% block content %}
 {% set names = config.extra.names | default(value=[]) %}
 <div class="container">
-    <nav class="side-nav">
-        <h2>Messages</h2>
-        <ul class="name-list">
-            {% for slug in names %}
-                <li class="name-item">
-                    <a href="/{{ slug }}">
-                        {{ config.extra.display_names[slug] | default(value=slug) }}
-                    </a>
-                </li>
-            {% endfor %}
-        </ul>
-    </nav>
-    
     <main class="main-content">
         <h1>{{ section.title }}</h1>
         {{ section.content | safe }}
+        
+        <div class="page-navigation">
+            <a href="/index-list" class="nav-button">
+                Index
+            </a>
+            
+            {% if names | length > 0 %}
+                {% set first_page = names | first %}
+                <a href="/{{ first_page }}" class="nav-button next">
+                    {{ config.extra.display_names[first_page] | default(value=first_page) }} →
+                </a>
+            {% endif %}
+        </div>
     </main>
 </div>
 {% endblock content %}

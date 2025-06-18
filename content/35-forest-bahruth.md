@@ -1,5 +1,5 @@
 +++
-title = "Forest Baruth"
+title = "Forest Bahruth"
 template = "page.html"
 +++
 

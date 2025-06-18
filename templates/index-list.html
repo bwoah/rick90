@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% set names = config.extra.names | default(value=[]) %}
+<div class="container">
+    <main class="main-content">
+        <h1>Index of Messages</h1>
+        <ul class="name-list">
+            {% for slug in names %}
+                <li class="name-item">
+                    <a href="/{{ slug }}">
+                        {{ config.extra.display_names[slug] | default(value=slug) }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+        
+        <div class="page-navigation">
+            <a href="/" class="nav-button home">
+                Home
+            </a>
+        </div>
+    </main>
+</div>
+{% endblock content %}

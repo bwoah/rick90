@@ -45,11 +45,12 @@ names = [
     "36-doug-and-deb-iseri",
     "37-tom-long",
     "38-steve-king",
-    "39-cathy-lazar-nelson",
-    "40-john-lori-phillips",
-    "41-alice-fulmer",
-    "42-christine-samardich",
-    "43-final-message"
+    "39-judy-twigg",
+    "40-cathy-lazar-nelson",
+    "41-john-lori-phillips",
+    "42-alice-fulmer",
+    "43-christine-samardich",
+    "44-final-message"
 ]
 
 # This maps slugs to display names
@@ -92,8 +93,9 @@ names = [
 36-doug-and-deb-iseri = "Doug and Deb Iseri"
 37-tom-long = "Tom Long"
 38-steve-king = "Steve King"
-39-cathy-lazar-nelson = "Cathy Lazar Nelson"
-40-john-lori-phillips = "John and Lori Phillips"
-41-alice-fulmer = "Alice Fulmer"
-42-christine-samardich = "Christine Samardich"
-43-final-message = "Final Message"
+39-judy-twigg = "Judi Twigg"
+40-cathy-lazar-nelson = "Cathy Lazar Nelson"
+41-john-lori-phillips = "John and Lori Phillips"
+42-alice-fulmer = "Alice Fulmer"
+43-christine-samardich = "Christine Samardich"
+44-final-message = "Final Message"

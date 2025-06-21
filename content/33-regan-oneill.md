@@ -15,10 +15,10 @@ Rick can be quite persuasive. After a full day of skiing, 10 of us arrived at a 
 ### Rick, "The Trickster" 
 After golf, the topic of water skiing came up, and someone recalled that I used to ski barefoot. Rick immediately remarked that while he didn't doubt my past abilities, my waterskiing days were but a distant memory. Predictably, I rose to the bait and bet him $100 that I could still perform like a teenager. The bet was set to take place the next morning on Lake Cadillac, witnessed by Rick, Jeff Olsen, Steve Frisbie, and Phil Potvin. The results of that day on the water are shown below: 
 
-{{ image(src="55101d42-162a-45cb-fce6-ff8e10d9a600", caption="My confidence is building.") }}
-
-{{ image(src="1f64ecc1-3eca-44cf-1ca4-afc635eba300", caption="I got this!") }}
-
-{{ image(src="3296388c-b9a5-4868-afde-0460730f4d00", caption="Well, technically, I was barefoot.") }}
+<div class="image-grid">
+    {{ image(src="55101d42-162a-45cb-fce6-ff8e10d9a600", caption="My confidence is building.") }}
+    {{ image(src="1f64ecc1-3eca-44cf-1ca4-afc635eba300", caption="I got this!") }}
+    {{ image(src="3296388c-b9a5-4868-afde-0460730f4d00", caption="Well, technically, I was barefoot.") }}
+</div>
 
 I love you, Rick. Happy 90th birthday. Regan

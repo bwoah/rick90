@@ -9,6 +9,6 @@ Lucky me to have been his friend for the last 45 years!
 
 Kathy McCurdy
 
-<div class="image-grid">
+<div class="single-image">
     {{ image(src="9f5c9a3f-9bc3-4571-ba88-74dbc3c78000", caption="Rick knows a good dentist he can recommend") }}
 </div>

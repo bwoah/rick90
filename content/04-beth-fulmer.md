@@ -3,7 +3,7 @@ title = "Beth Fulmer"
 template = "page.html"
 +++
 
-<div class="image-grid">
+<div class="single-image">
     {{ image(src="7bbf2059-4691-4773-af7b-592838d3c000", caption="Sophie with Grandpa Rick") }}
 </div>
 

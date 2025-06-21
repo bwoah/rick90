@@ -57,9 +57,24 @@ body {
 // Image Grid and Figure Styling
 .image-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     margin: 2rem 0;
+    max-width: 1200px;
+    margin: 2rem auto;
+}
+
+// Single Image Styling
+.single-image {
+    max-width: 800px;
+    margin: 2rem auto;
+    
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
 }
 
 figure {
@@ -159,6 +174,9 @@ figure {
     img {
         border-radius: 8px;
         box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        max-width: 800px;
+        margin: 0 auto;
+        display: block;
     }
 }
 
@@ -219,6 +237,13 @@ figure {
         .nav-button {
             min-width: 100px;
         }
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero-image img,
+    .single-image {
+        max-width: 70%;
     }
 }
 
